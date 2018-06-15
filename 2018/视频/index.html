@@ -1,0 +1,165 @@
+<!--
+【VIP视频在线观看】
+
+接口：
+http://yun.zihu.tv/yunparse/?url=
+http://www.wmxz.wang/video.php?url=
+http://www.vipjiexi.com/yun.php?url=
+http://api.cloudparse.com/?url=
+http://v.72du.com/api/?url=
+http://api.47ks.com/webcloud/?v=
+http://000o.cc/jx/ty.php?url=
+http://yyygwz.com/index.php?url=
+http://s1y2.com/?url=
+http://yun.mt2t.com/yun?url=
+  http://mt2t.com/yun?url=
+http://qtzr.net/s/?qt=
+
+
+播放网站：
+http://v.30d.bid
+
+*
+*死链：
+*http://player.gakui.top/?url=
+*http://api.baiyug.cn/vip/index.php?url=
+*http://ckjiexi.duapp.com/?url=
+*http://5qiyi.sdyhy.cn/5qiyi/5qiyi1.php?url=
+*http://5qiyi.sdyhy.cn/5qiyi/5qiyi2.php?url=
+*http://jx.71ki.com/?url=
+*http://www.ou522.cn/t2/1.php?url=
+*http://jx.haokan5.net/ty/tong.php?url=
+*http://jx.haokan5.net/jx/?url=
+*http://jx.ckkgi.top/123.php?url=
+*
+*部份链接来源：
+*http://www.yydy8.com/Common/?url=
+*http://www.200919.com/jiexi/vip.php?url=
+*
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>视频</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<style>
+  a{
+    color: white!important;
+  }
+  body {
+    background-color: black;
+    background-image:url("D:/pic/home/spurs.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    text-align:center;
+  }
+  p{
+    color: white;
+  }
+  input:-moz-placeholder { color: #369; }
+  ::-webkit-input-placeholder { color:#369; }
+</style>
+</head>
+<body onload="javascript:pSearchText.focus();">
+
+<noscript>你的浏览器不支持JavaScript!</noscript>
+<p>&nbsp;</p>
+<p>
+<input id="pSearchText" type="text" size="50" title="" placeholder="pniaoSearch" onkeydown="javascript:if(event.keyCode==13){pSearch()};" autofocus>
+<!-- <input type="button" value="胖鸟影视搜索" onclick="javascript:pSearch()" /> -->
+</p><p> ASCII: 48  65  97  0 A a</p>
+<p></p>
+<p> <a href="http://139.224.236.108/1.html" target="_blank" rel="noopener">baidu wenku</a> </p>
+<p>
+视频地址：
+<input id="txtIn" type="text" size="50" title="在这里输入或粘贴在线视频地址，如下：
+http://www.iqiyi.com/v_19rralv4rc.html（北极大冒险）
+http://v.youku.com/v_show/id_XMjQ3ODU0NzIwMA==.html（我不是潘金莲）
+http://www.tudou.com/albumplay/Xme8hIC6MoA.html（超级快递）
+https://v.qq.com/x/cover/fetiylrqxyebh7g.html（魔兽）
+http://film.sohu.com/album/9139603.html（机械师2：复活）
+http://www.le.com/ptv/vplay/26322741.html（盗墓笔记）
+http://www.mgtv.com/b/1027/743974.html（碟中谍2）
+http://vip.pptv.com/show/yUYysRlic7y2QDnY.html（星球大战外传：侠盗一号）
+......" onkeydown="javascript:if(event.keyCode==13){doPlayVIP();txtIn.select();txtIn.focus();};">
+<a style="color:white" href="javascript:void(0);" title="清空文本" onclick="javascript:txtIn.value='';txtIn.focus();" target="_blank" rel="noopener">清空</a>
+<select id="lefturl" onkeydown="javascript:if(event.keyCode==13){doPlayVIP();txtIn.select();txtIn.focus();};">
+<option value="http://yun.zihu.tv/yunparse/?url=" selected>zihu</option>
+<option value="http://www.wmxz.wang/video.php?url=">wmxz</option>
+<option value="http://www.vipjiexi.com/yun.php?url=">vipjiexi</option>
+<option value="http://api.cloudparse.com/?url=">cloudparse</option>
+<option value="http://v.72du.com/api/?url=">72du</option>
+<option value="http://api.47ks.com/webcloud/?v=">47ks</option>
+<option value="http://000o.cc/jx/ty.php?url=">000o</option>
+<option value="http://yyygwz.com/index.php?url=">yyygwz</option>
+<option value="http://s1y2.com/?url=">s1y2</option>
+<option value="http://yun.mt2t.com/yun?url=">mt2t</option>
+<option value="http://qtzr.net/s/?qt=">qtzr</option>
+</select>
+
+
+
+<input type="button" value="VIP解析" onclick="javascript:doPlayVIP();txtIn.select();txtIn.focus();">
+</p>
+
+<!-- <p>
+【zihu】爱奇艺、优酷、土豆、腾讯、搜狐、乐视、芒果、PPTV<br />
+【wmxz】爱奇艺、优酷、土豆、腾讯、搜狐、乐视、芒果、PPTV<br/>
+【vipjiexi】爱奇艺、优酷、土豆、腾讯、搜狐、乐视、芒果、PPTV<br />
+【cloudparse】爱奇艺、优酷、土豆、腾讯、搜狐、乐视、芒果、PPTV<br />
+【72du】爱奇艺、优酷、腾讯、搜狐、乐视、芒果、PPTV<br />
+【47ks】爱奇艺、优酷、腾讯、搜狐、乐视、芒果、PPTV<br />
+【000o】爱奇艺、优酷、土豆、搜狐、乐视、芒果、PPTV<br />
+【yyygwz】爱奇艺、优酷、土豆、搜狐、乐视、芒果、PPTV<br />
+【s1y2】爱奇艺、腾讯、搜狐、乐视、芒果、PPTV<br />
+【mt2t】爱奇艺、腾讯、搜狐、乐视、芒果<br />
+【qtzr】搜狐、乐视<br />
+</p>
+ -->
+<p>&nbsp;</p>
+
+<script type="text/javascript">
+<!--
+function doPlayVIP() {
+  var strIn,theurl;
+  var iPos=0;
+  strIn = decodeURIComponent(txtIn.value);
+  if ( strIn.length<1 ) {
+    alert("【错误提示】\n\n    内容为空，请在文本框内输入或粘贴视频地址！\n\n");
+    return;
+  };
+  iPos = strIn.indexOf(".html");
+  if ( iPos>0 ) {
+    txtIn.value = strIn.substr(0,iPos+5);
+  } else {
+    iPos = strIn.indexOf(".shtml");
+    if ( iPos>0 && strIn.indexOf(".sohu.com")>0 ) {
+      txtIn.value = strIn.substr(0,iPos+6);
+    };
+  };
+  theurl = lefturl.value + txtIn.value;
+  window.open(theurl);
+};
+// -->
+</script>
+
+
+<script type="text/javascript">
+var pUrl = "http://www.pniao.com/Mov/so/";
+function pSearch(){
+	var pSearchValue = $("#pSearchText").val();
+	window.open(pUrl+pSearchValue);	
+}
+</script>
+
+</body>
+</html>
+
+
+<!--
+original:
+NTJwb2ppZeiuuuWdmwpRUee+pO+8mjU2ODU4MDI3MA
+-->
+
+
